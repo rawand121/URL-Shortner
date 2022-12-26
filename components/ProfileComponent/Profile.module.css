@@ -1,0 +1,15 @@
+.data {
+  font-size: 2rem;
+  color: #439498;
+  margin: 15px 0 20px;
+  display: inline-block;
+}
+
+.bordered {
+  /* border: 1px solid #439498; */
+  border-radius: 5px;
+  box-shadow: 0 8px 15px #ababab;
+  padding: 30px;
+  margin-top: 50px;
+  background-color: #f4f4f4;
+}

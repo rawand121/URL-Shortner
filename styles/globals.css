@@ -1,26 +1,172 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: Rabar;
+  src: url("../Rabar_044.woff");
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+html {
+  font-size: 60.5%;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+div[role="table"] a {
+  color: #225da4;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+  direction: rtl;
+  font-family: Rabar;
+  background-color: #f8f8f8;
+}
+
+.loginContentContainer {
+  background-color: #3a3f48;
+  padding: 10px 0;
+  color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.loginContentContainer.admin {
+  background-color: #3a3f48;
+}
+
+.loginContentContainer img.logo {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.loginContentContainer .loginContent {
+  text-align: center;
+}
+
+.loginContentContainer .loginContent h5 {
+  font-size: 2rem;
+}
+
+.loginContentContainer .loginContent p {
+  font-size: 1.3rem !important;
+}
+
+.loginContentContainer span {
+  font-size: 1.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+  height: 40px;
+  font-size: 1.4rem !important;
+}
+
+option {
+  font-size: 1.5rem;
+  padding: 8px;
+}
+
+.loginContentContainer .logoLoginContainer {
+  width: 100%;
+}
+
+.login {
+  width: 90%;
+}
+
+.login h4 {
+  color: #2d3132;
+  font-size: 4rem;
+}
+
+.login .input_field {
+  margin: 20px 0;
+}
+
+.login .input_field label {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.login span {
+  font-size: 1.5rem;
+}
+
+.submitForm {
+  background-color: #225da4;
+  color: white;
+  display: block;
+  width: 100% !important;
+  margin-top: 30px;
+  font-size: 2rem;
+}
+
+.submitForm.admin {
+  background-color: #3a3f48;
+}
+
+.submitForm:hover {
+  color: #fff;
+}
+
+.signinNote {
+  color: #a3a3a3;
+  font-size: 2rem;
+}
+
+.form.login label {
+  color: #6b6b6b;
+}
+
+.footerData {
+  background-color: #3a3f48;
+  color: #fff;
+  width: 100%;
+  display: block;
+  padding: 7px;
+}
+
+.admin .conainerBackground {
+  background-image: linear-gradient(
+    to right,
+    rgb(58, 63, 72),
+    rgb(58, 63, 72),
+    rgb(58, 63, 72),
+    transparent
+  );
+  padding: 7px 5px;
+}
+
+.conainerBackground {
+  background-image: linear-gradient(
+    to right,
+    rgb(34, 93, 164),
+    rgb(34, 93, 164),
+    rgb(34, 93, 164),
+    transparent
+  );
+  padding: 7px 5px;
+}
+.conainerBackground h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hbotQl {
+  font-size: 2rem;
+}
+
+.rdt_Pagination {
+  direction: ltr;
 }

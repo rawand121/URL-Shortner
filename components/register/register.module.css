@@ -1,0 +1,26 @@
+.registerForm {
+  /* border: #333 1px solid; */
+  padding: 50px 20px;
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 8px 15px #c4c4c4;
+  border-radius: 6px;
+}
+
+.boxContainer {
+  background-color: #27e19726;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.boxContainerErr {
+  background-color: #e1302726;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.shortLinkSection,
+.shortLinkSectionErr {
+  display: block;
+  margin-top: 70px !important;
+}

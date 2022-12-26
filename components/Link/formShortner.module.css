@@ -1,0 +1,55 @@
+.form {
+  margin-top: 30px;
+}
+
+.formInput {
+  margin: 10px 0;
+}
+
+.form label {
+  font-size: 1.7rem;
+  margin: 5px 0;
+}
+
+.header {
+  font-size: 3rem;
+}
+
+.btn {
+  background-color: #439498;
+  color: #fff;
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 1.8rem;
+}
+
+.boxContainer {
+  background-color: #27e19726;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.boxContainerErr {
+  background-color: #e1302726;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.boxContainer a {
+  color: #333;
+  text-decoration: none;
+}
+
+.shortLinkSection,
+.shortLinkSectionErr {
+  display: block;
+  margin-top: 70px !important;
+}
+
+.modalTitle {
+  font-size: 2rem;
+}
+
+.modalBody {
+  font-size: 1.4rem;
+}
