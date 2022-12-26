@@ -1,9 +1,8 @@
 import axios from "../axiosConfig";
-import styles from "../styles/Home.module.css";
 import LinkShortnerForm from "../components/Link/LinkShortner";
 import Layout from "../components/Layout/layout";
 import Navbar from "../components/Navbar/navbar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Home = () => {
   const [Link, setLink] = useState();
@@ -29,7 +28,7 @@ const Home = () => {
   return (
     <Layout title="New Page">
       <Navbar active={"home"} />
-      <div className={styles.container + " container"}>
+      <div className={"container"}>
         <LinkShortnerForm
           submitForm={submitForm}
           shortUrl={Link}

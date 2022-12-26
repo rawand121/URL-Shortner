@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import Layout from "../components/Layout/layout";
 import Navbar from "../components/Navbar/navbar";
 import LoginForm from "../components/LoginForm/loginForm";

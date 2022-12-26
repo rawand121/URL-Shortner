@@ -2,7 +2,7 @@ import axios from "../axiosConfig";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-const Page = (props) => {
+const Page = () => {
   const [Error, setError] = useState();
   const router = useRouter();
   useEffect(() => {
