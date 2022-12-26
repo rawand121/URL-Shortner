@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-
+import { Analytics } from "@vercel/analytics/react";
 import { SessionProvider, useSession } from "next-auth/react";
 
 export default function App({
@@ -11,9 +11,13 @@ export default function App({
       {Component.auth ? (
         <Auth>
           <Component {...pageProps} />
+          <Analytics />
         </Auth>
       ) : (
-        <Component {...pageProps} />
+        <>
+          <Component {...pageProps} />
+          <Analytics />
+        </>
       )}
     </SessionProvider>
   );
