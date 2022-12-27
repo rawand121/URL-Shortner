@@ -10,7 +10,7 @@ connectDatabase();
 export default NextAuth({
   session: {
     jwt: true,
-    secret: process.env.JWT_SECRET,
+    secret: process.env.secret,
   },
   providers: [
     CredentialsProvider({
