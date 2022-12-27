@@ -17,9 +17,9 @@ const Navbar = (props) => {
         <nav
           className={classes.navbar + " navbar navbar-expand-lg navbar-light"}
         >
-          <div className="container-fluid">
+          <div className="container-fluid px-0">
             <button
-              className="navbar-toggler"
+              className="navbar-toggler mx-3"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -33,7 +33,7 @@ const Navbar = (props) => {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav ms-auto mb-2 mb-lg-0 dropdown">
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0 dropdown px-3">
                 <li className="nav-item">
                   <Link legacyBehavior href={"/"}>
                     <a
@@ -105,7 +105,7 @@ const Navbar = (props) => {
                 )}
               </ul>
               <div className={classes.searchField}>
-                <h1>لۆگۆ</h1>
+                <h1 className="px-3">لۆگۆ</h1>
               </div>
             </div>
           </div>
