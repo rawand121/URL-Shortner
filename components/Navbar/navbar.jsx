@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./navbar.module.css";
 import Link from "next/link";
 import { signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 
 const Navbar = (props) => {
   const { data } = useSession();
@@ -105,7 +106,9 @@ const Navbar = (props) => {
                 )}
               </ul>
               <div className={classes.searchField}>
-                <h1 className="px-3">لۆگۆ</h1>
+                <div className={"image-container"}>
+                  <Image src={"/LOGO.png"} fill className={"image"} />
+                </div>{" "}
               </div>
             </div>
           </div>

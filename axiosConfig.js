@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const config = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://url-shortner-neon.vercel.app",
 });
 
 export default config;

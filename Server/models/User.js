@@ -7,7 +7,7 @@ const userSchema = new Schema(
     email: {
       type: String,
       required: true,
-      unique: true,
+      unique: [true, "ئیمەیڵەکە لە کاردایە تکایە ئیمەیڵێکی تر بەکاربهێنە"],
     },
     password: {
       type: String,

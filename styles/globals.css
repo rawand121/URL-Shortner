@@ -179,3 +179,28 @@ option {
 .rdt_Pagination {
   direction: ltr;
 }
+
+@media only screen and (max-width: 769px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.image-container {
+  width: 100%;
+}
+
+.image-container > div {
+  position: unset !important;
+}
+
+.image-container .image {
+  object-fit: contain;
+  width: 100% !important;
+}

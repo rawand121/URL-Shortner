@@ -8,7 +8,7 @@ const registerUser = async (req, res, next) => {
     const userExist = await Users.findOne({ email });
 
     if (userExist) {
-      return;
+      throw new Error("ئیمەیڵەکە بەکارهاتووە، تکایە هەوڵی دانەیەکی نوێ بدە");
     }
 
     const salt = await bcrypt.genSalt(10);

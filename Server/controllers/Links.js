@@ -9,7 +9,7 @@ const submitLinkShortner = async (req, res, next) => {
     let { slug } = req.body;
 
     if (!url) {
-      throw new Error("Url and slug cannot be empty");
+      throw new Error("URL ناکرێت بەتاڵ بێت");
     }
 
     if (!slug) {
@@ -19,11 +19,13 @@ const submitLinkShortner = async (req, res, next) => {
     const slugIsExist = await Urls.findOne({ slug });
 
     if (slugIsExist) {
-      throw new Error("Slug is already exist");
+      throw new Error(
+        "ناسنامەکە بەکارهاتووە، تکایە دانەیەکی نوێ داخڵ بکە یاخود هیچ مەنووسە و ڕێگە بدە ئێمە بۆت دیاری بکەین"
+      );
     }
 
     if (slug.length > 5) {
-      throw new Error("Slug should be at most 5 charecters long");
+      throw new Error("ناسنامەی لینکەکە نابێت لە 5 پیت زیاتر بێت");
     }
 
     const newUrl = await new Urls({

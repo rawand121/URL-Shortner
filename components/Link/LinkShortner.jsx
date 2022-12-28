@@ -3,7 +3,6 @@ import classes from "./formShortner.module.css";
 import UndrawImage from "../../public/undraw.svg";
 import { getSession } from "next-auth/react";
 import Image from "next/image";
-import Link from "next/link";
 
 const LinkShortner = (props) => {
   const [Url, setUrl] = useState();
@@ -67,13 +66,16 @@ const LinkShortner = (props) => {
             </div>
           </form>
           <>
-            {(props.shortUrl && props.success) ? (
+            {props.shortUrl && props.success ? (
               <div className={classes.shortLinkSection}>
                 <h2 className="my-5">سەرکەوتوو بوو</h2>
                 <div className={classes.boxContainer}>
-                  <Link href={props.shortUrl ? props.shortUrl : ""}>
+                  <a
+                    target={"_blank"}
+                    href={props.shortUrl ? props.shortUrl : ""}
+                  >
                     <h3>لینکی کورتکراوە : {props.shortUrl}</h3>
-                  </Link>
+                  </a>
                 </div>
               </div>
             ) : null}
