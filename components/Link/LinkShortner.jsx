@@ -72,6 +72,7 @@ const LinkShortner = (props) => {
                 <div className={classes.boxContainer}>
                   <a
                     target={"_blank"}
+                    rel={"noreferrer"}
                     href={props.shortUrl ? props.shortUrl : ""}
                   >
                     <h3>لینکی کورتکراوە : {props.shortUrl}</h3>
