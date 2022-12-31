@@ -13,7 +13,8 @@ const Page = () => {
           window.location = res.data;
         }
       } catch (err) {
-        setError(err.response.data);
+        // setError(err.response.data);
+        console.log(err);
       }
     };
 

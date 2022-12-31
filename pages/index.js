@@ -21,8 +21,9 @@ const Home = () => {
         setSuccess(false);
       }
     } catch (error) {
-      setError(error.response.data);
-      setSuccess(false);
+      // setError(error.response.data);
+      console.log(error);
+      // setSuccess(false);
     }
   };
   return (
