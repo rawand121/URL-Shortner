@@ -71,13 +71,8 @@ const LinkShortner = (props) => {
               <div className={classes.shortLinkSection}>
                 <h2 className="my-5">سەرکەوتوو بوو</h2>
                 <div className={classes.boxContainer}>
-                  <Link
-                    href={props.shortUrl ? props.shortUrl : ""}
-                    legacyBehavior
-                  >
-                    <a>
-                      <h3>لینکی کورتکراوە : {props.shortUrl}</h3>
-                    </a>
+                  <Link href={props.shortUrl ? props.shortUrl : ""}>
+                    <h3>لینکی کورتکراوە : {props.shortUrl}</h3>
                   </Link>
                 </div>
               </div>
