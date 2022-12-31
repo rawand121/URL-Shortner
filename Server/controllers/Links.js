@@ -53,8 +53,8 @@ const visitLink = async (req, res, next) => {
     const { id } = req.query;
     const website = await Urls.find({ slug: id });
     console.log(website);
-    res.redirect(`https://www.google.com`);
-    // res.redirect(`${website[0].url}`);
+    // res.redirect(`https://www.google.com`);
+    res.redirect(`${website[0].url}`);
   } catch (error) {
     throw new Error(error.message);
   }
