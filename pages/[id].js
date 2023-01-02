@@ -9,7 +9,12 @@ export const getServerSideProps = async (ctx) => {
   let Error = "";
   try {
     const { data } = await axios(`/api/visitPage?id=${ctx.query.id}`);
-    window.location = data;
+    return {
+      redirect: {
+        destination: `${data}`,
+        permanentRedirect: false,
+      },
+    };
   } catch (err) {
     Error = err.response.data;
   }
