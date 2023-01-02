@@ -37,7 +37,12 @@ const TableOfUrls = (props) => {
       selector: (row) => row["createdAt"],
       sortable: true,
       center: true,
-      cell: (row) => <h4>{row["createdAt"].substr(0, 10)}</h4>,
+      cell: (row) => (
+        <h4>
+          {row["createdAt"].substr(0, 10).replace(",", "")} -{" "}
+          {row["createdAt"].substr(10, 10)}
+        </h4>
+      ),
     },
   ];
 

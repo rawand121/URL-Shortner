@@ -32,6 +32,7 @@ const submitLinkShortner = async (req, res, next) => {
       slug,
       url,
       shortUrl: `${axios.defaults.baseURL}/${slug}`,
+      createdAt: new Date().toLocaleString(),
     });
 
     newUrl.save();

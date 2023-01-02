@@ -18,6 +18,7 @@ const registerUser = async (req, res, next) => {
       username,
       email: email.toLowerCase(),
       password: hashedPassword,
+      createdAt: new Date().toLocaleString(),
     });
 
     await user.save();

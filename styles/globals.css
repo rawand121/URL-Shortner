@@ -204,3 +204,7 @@ option {
   object-fit: contain;
   width: 100% !important;
 }
+
+.rdt_TableBody h4 {
+  direction: ltr;
+}

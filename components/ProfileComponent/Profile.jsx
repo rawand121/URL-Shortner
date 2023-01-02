@@ -20,7 +20,13 @@ const ProfileComponent = ({ user }) => {
           </div>
           <div className="col-sm-6 col-md-3 text-center">
             <h1>دروستکردن</h1>
-            <span className={classes.data}>{user.createdAt.substr(0, 10)}</span>
+            <span className={classes.data} style={{ direction: "ltr" }}>
+              {user.createdAt
+                .substr(0, 10)
+                .replace(",", "")
+                .replaceAll("/", "-")}
+              / {user.createdAt.substr(10, 10)}
+            </span>
           </div>
         </div>
       </div>
