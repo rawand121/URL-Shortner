@@ -1,6 +1,5 @@
 const nextConfig = {
   reactStrictMode: false,
-
   env: {
     NEXTAUTH_SECRET: "Rawand123",
     MONGODB_URI:

@@ -6,7 +6,7 @@ import { getSession } from "next-auth/react";
 
 const RegisterPage = () => {
   return (
-    <Layout title="Register">
+    <Layout title="URL Shortner - Register">
       <Navbar active={"register"} />
       <div className="container">
         <Register />

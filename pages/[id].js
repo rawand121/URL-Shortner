@@ -1,27 +1,23 @@
 import axios from "../axiosConfig";
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 
-const Page = () => {
-  const [Error, setError] = useState();
-  const router = useRouter();
-  useEffect(() => {
-    const moveToRealPage = async () => {
-      try {
-        if (router.query.id) {
-          const res = await axios.get(`/api/visitPage?id=${router.query.id}`);
-          window.location = res.data;
-        }
-      } catch (err) {
-        // setError(err.response.data);
-        console.log(err);
-      }
-    };
+const Page = ({ Error }) => {
+  return <div>{Error && <h1 className="text-center mt-5">{Error}</h1>}</div>;
+};
 
-    moveToRealPage();
-  }, [router.query.id]);
-
-  return <div>{Error && <h1>{Error}</h1>}</div>;
+export const getServerSideProps = async (ctx) => {
+  let Error = "";
+  try {
+    const { data } = await axios(`/api/visitPage?id=${ctx.query.id}`);
+    window.location = data;
+  } catch (err) {
+    Error = err.response.data;
+  }
+  return {
+    props: {
+      Error,
+    },
+  };
 };
 
 export default Page;

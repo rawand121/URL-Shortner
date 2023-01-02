@@ -52,9 +52,11 @@ const visitLink = async (req, res, next) => {
   try {
     const { id } = req.query;
     const website = await Urls.find({ slug: id });
-    console.log(website);
-    // res.redirect(`https://www.google.com`);
-    res.redirect(`${website[0].url}`);
+    if (website.length === 0) {
+      res.status(404);
+      throw new Error("هیچ پەڕەیەک نەدۆزرایەوە، تکایە جارێکی تر هەوڵ بدە");
+    }
+    res.json(`${website[0].url}`);
   } catch (error) {
     throw new Error(error.message);
   }

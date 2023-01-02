@@ -4,57 +4,53 @@ import DataTable from "react-data-table-component";
 
 const TableOfUrls = (props) => {
   const [Columns, setColumns] = useState();
+
   useEffect(() => {
-    setColumns(props.urls.links);
+    setColumns(props.urls.links.sort().reverse());
   }, [props.urls]);
 
   const titles = [
     {
       name: "لینکی کورتکراوە",
-      selector: "shortUrl",
+      selector: (row) => row["shortUrl"],
       sortable: false,
       center: true,
-      cell: (row) => {
-        return (
-          <Link href={`${row.url}`}>
-            <h4>{row.shortUrl}</h4>
-          </Link>
-        );
-      },
+      cell: (row) => (
+        <Link href={`/${row["slug"]}`}>
+          <h4>{row["shortUrl"]}</h4>
+        </Link>
+      ),
     },
     {
       name: "لینکی ئاسایی",
-      selector: "url",
+      selector: (row) => row["url"],
       sortable: false,
       center: true,
-
-      cell: (row) => {
-        return (
-          <Link href={`${row.url}`}>
-            <h4>{row.url}</h4>
-          </Link>
-        );
-      },
+      cell: (row) => (
+        <Link href={`${row["url"]}`}>
+          <h4>{row["url"]}</h4>
+        </Link>
+      ),
     },
     {
       name: "بەروار",
-      selector: "createdAt",
+      selector: (row) => row["createdAt"],
       sortable: true,
       center: true,
-      cell: (row) => {
-        return <h4>{row.createdAt.substr(0, 10)}</h4>;
-      },
+      cell: (row) => <h4>{row["createdAt"].substr(0, 10)}</h4>,
     },
   ];
+
+  const Title = () => {
+    return <h2 style={{ marginRight: "30px" }}>داتاکانت</h2>;
+  };
 
   return (
     <>
       {Columns ? (
         <div className="mt-5">
           <DataTable
-            title={() => {
-              return <h2 style={{ marginRight: "30px" }}>داتاکانت</h2>;
-            }}
+            title={<Title />}
             columns={titles}
             data={Columns}
             striped

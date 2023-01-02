@@ -71,7 +71,7 @@ const LinkShortner = (props) => {
               <div className={classes.shortLinkSection}>
                 <h2 className="my-5">سەرکەوتوو بوو</h2>
                 <div className={classes.boxContainer}>
-                  <Link href={props.shortUrl ? props.shortUrl : ""}>
+                  <Link href={`${props["shortUrl"]}`}>
                     <h3>لینکی کورتکراوە : {props.shortUrl}</h3>
                   </Link>
                 </div>
@@ -90,7 +90,7 @@ const LinkShortner = (props) => {
         </div>
         <div className="col-sm-4">
           <Image
-            alt="HELLO"
+            alt="Image"
             src={UndrawImage}
             layout={"responsive"}
             objectFit={"cover"}

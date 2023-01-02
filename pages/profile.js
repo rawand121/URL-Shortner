@@ -7,7 +7,7 @@ import { getSession } from "next-auth/react";
 import Spinner from "../components/spinner/spinner";
 import axios from "../axiosConfig";
 
-const Profile = (props) => {
+const Profile = () => {
   const [User, setUser] = useState();
   const [Error, setError] = useState();
 
@@ -25,7 +25,7 @@ const Profile = (props) => {
 
   return (
     <>
-      <Layout title="Profile">
+      <Layout title="URL Shortner - Profile">
         <Navbar active={"profile"} />
         {Error ? (
           <h1>{Error}</h1>

@@ -107,8 +107,13 @@ const Navbar = (props) => {
               </ul>
               <div className={classes.searchField}>
                 <div className={"image-container"}>
-                  <Image src={"/LOGO.png"} fill className={"image"} />
-                </div>{" "}
+                  <Image
+                    alt="Logo"
+                    src={"/LOGO.png"}
+                    fill
+                    className={"image"}
+                  />
+                </div>
               </div>
             </div>
           </div>

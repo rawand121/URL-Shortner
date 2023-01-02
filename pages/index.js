@@ -16,18 +16,14 @@ const Home = () => {
         setLink(res.data);
         setError();
         setSuccess(true);
-      } else {
-        setError("کێشەی سێرڤەر هەیە، تکایە تۆزێکی تر هەوڵ بدەرەوە");
-        setSuccess(false);
       }
     } catch (error) {
-      // setError(error.response.data);
-      console.log(error);
-      // setSuccess(false);
+      setError(error.response.data);
+      setSuccess(false);
     }
   };
   return (
-    <Layout title="New Page">
+    <Layout title="URL Shortner - Home">
       <Navbar active={"home"} />
       <div className={"container"}>
         <LinkShortnerForm

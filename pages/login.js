@@ -6,7 +6,7 @@ import { getSession } from "next-auth/react";
 
 const Login = () => {
   return (
-    <Layout title="Login">
+    <Layout title="URL Shortner - Login">
       <Navbar active={"login"} />
       <LoginForm />
     </Layout>
