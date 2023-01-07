@@ -58,4 +58,9 @@
   .btn {
     margin: 50px 0;
   }
+
+  .shortLinkSection,
+  .shortLinkSectionErr {
+    margin-bottom: 50px;
+  }
 }

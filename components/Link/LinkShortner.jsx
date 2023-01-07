@@ -39,17 +39,19 @@ const LinkShortner = (props) => {
                   type="text"
                   className="form-control"
                   id="Url"
+                  defaultValue={Url}
                   onChange={(e) => setUrl(e.target.value)}
                 />
               </div>
             </div>
             <div className={"col-sm-12 " + classes.formInput}>
               <div className="inputField">
-                <label htmlFor="ID">ناسنامە</label>
+                <label htmlFor="ID">ID</label>
                 <input
                   type="text"
                   className="form-control"
                   id="ID"
+                  defaultValue={Slug}
                   onChange={(e) => setSlug(e.target.value)}
                 />
               </div>
