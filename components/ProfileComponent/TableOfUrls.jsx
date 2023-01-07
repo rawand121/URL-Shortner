@@ -47,7 +47,7 @@ const TableOfUrls = (props) => {
   ];
 
   const Title = () => {
-    return <h2 style={{ marginRight: "30px" }}>داتاکانت</h2>;
+    return <h1 style={{ marginRight: "30px", fontSize: "3rem" }}>داتاکانت</h1>;
   };
 
   return (
